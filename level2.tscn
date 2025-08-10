@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://bhiqu26upmva6"]
+[gd_scene load_steps=39 format=4 uid="uid://bhiqu26upmva6"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_r6vdu"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_21xmu"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://hdqagp1r10iq" path="res://button.tscn" id="11_dc5vx"]
 [ext_resource type="Script" uid="uid://rslmo8gwt1tg" path="res://button3.gd" id="12_s8oj7"]
 [ext_resource type="PackedScene" uid="uid://bpppg0sd2ueqv" path="res://log.tscn" id="13_s8oj7"]
+[ext_resource type="PackedScene" uid="uid://doodjkdkt1wvf" path="res://orb.tscn" id="14_mw4xc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
 atlas = ExtResource("2_21xmu")
@@ -367,6 +368,9 @@ metadata/powerup_type = false
 metadata/Activated = false
 
 [node name="Log" parent="." instance=ExtResource("13_s8oj7")]
+
+[node name="Orb" parent="." instance=ExtResource("14_mw4xc")]
+position = Vector2(0, 21)
 
 [connection signal="animation_changed" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="body_exited" from="Killzone" to="Killzone" method="_on_body_exited"]
