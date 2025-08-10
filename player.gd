@@ -11,6 +11,9 @@ func _physics_process(delta: float) -> void:
 	if inverseGravity == true:
 		up_direction.y = 1.0
 		animated_sprite.flip_v = true
+	elif inverseGravity == false:
+		up_direction.y = -1.0
+		animated_sprite.flip_v = false
 	# Add the gravity.
 	if not is_on_floor() and not(stop==true):
 		if inverseGravity == false:
