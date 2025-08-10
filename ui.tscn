@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdbcbt42fnxg"]
+
+[ext_resource type="FontFile" uid="uid://cx5pgu2jrh0lj" path="res://PixelIntv-OPxd.ttf" id="1_fyqef"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 227.0
+offset_top = 557.0
+offset_right = 923.0
+offset_bottom = 605.0
+theme_override_fonts/font = ExtResource("1_fyqef")
+theme_override_font_sizes/font_size = 40
+text = "Powerup get: X"
+horizontal_alignment = 1
+vertical_alignment = 1
