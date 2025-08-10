@@ -14,8 +14,5 @@ func _on_body_entered(body: Node2D) -> void:
 		timer.start()
 		print(Log.orbsCollected)
 
-
-
-
 func _on_timer_timeout() -> void:
 	visible = false

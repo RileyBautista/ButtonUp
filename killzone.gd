@@ -13,8 +13,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body == player:
 		timer.start()
 		playerSprite.play("death")
-		Log.deaths = 1 + Log.deaths
-		print(Log.deaths)
+		Log.deaths += 1
+		Log.orbsCollected = 0
 		player.stop = true
 		
 func _on_timer_timeout() -> void:
