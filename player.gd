@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -300.0
 @export var stop = false
 @export var inverseGravity = false
+@onready var jumpSound = $jump
 @onready var animated_sprite = $AnimatedSprite2D
 
 
@@ -27,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor() and stop == false:
+		jumpSound.playing = true
 		if inverseGravity == true:
 			velocity.y = (-1) * JUMP_VELOCITY
 		else:

@@ -2,10 +2,12 @@ extends Area2D
 
 @onready var button = $AnimatedSprite2D2
 @onready var player = $"../Player"
+@onready var powerupSound = $"../Player/powerUp"
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body == player:
+		powerupSound.playing = true
 		button.play("pressed")
 		player.inverseGravity = false
 		

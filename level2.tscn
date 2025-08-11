@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://bhiqu26upmva6"]
+[gd_scene load_steps=49 format=4 uid="uid://bhiqu26upmva6"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_r6vdu"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_21xmu"]
@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://n3nx3np48pv0" path="res://assets/More Tiles/tileset.png" id="5_qulpo"]
 [ext_resource type="Script" uid="uid://dm0kxnitddows" path="res://bg_musicl2.gd" id="6_2x2vu"]
 [ext_resource type="Texture2D" uid="uid://whnx2f3rtiq5" path="res://assets/More Tiles/bg_0.png" id="6_rmy57"]
+[ext_resource type="AudioStream" uid="uid://cwyjb6gv277e8" path="res://assets/Jump2.wav" id="7_iakae"]
 [ext_resource type="Texture2D" uid="uid://5ocbuol0wr7n" path="res://assets/More Tiles/bg_1.png" id="7_qulpo"]
+[ext_resource type="AudioStream" uid="uid://6xlksifm6dc8" path="res://assets/Pickup_Coin8.wav" id="8_7mylh"]
 [ext_resource type="Texture2D" uid="uid://40bunwfj74ds" path="res://assets/More Tiles/bg_2.png" id="8_jifot"]
+[ext_resource type="AudioStream" uid="uid://bphbqc8y21x7d" path="res://assets/Powerup2.wav" id="9_3k4dh"]
 [ext_resource type="Texture2D" uid="uid://cdbaelcalf37p" path="res://assets/Misc Sprites/spikes.png" id="9_jifot"]
 [ext_resource type="PackedScene" uid="uid://bky742od5l4o4" path="res://killzone.tscn" id="10_3opl0"]
 [ext_resource type="PackedScene" uid="uid://hdqagp1r10iq" path="res://button.tscn" id="11_dc5vx"]
@@ -317,6 +320,15 @@ position_smoothing_enabled = true
 stream = ExtResource("5_hp87d")
 autoplay = true
 script = ExtResource("6_2x2vu")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("7_iakae")
+
+[node name="orbPick" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("8_7mylh")
+
+[node name="powerUp" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("9_3k4dh")
 
 [node name="BaseMap" type="TileMapLayer" parent="."]
 position = Vector2(-1, 0)

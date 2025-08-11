@@ -8,8 +8,3 @@ func _ready() -> void:
 	if Log.currentLevel == 1:
 		Log.currentLevel = 2
 	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

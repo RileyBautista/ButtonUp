@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://6nylmryatr4i"]
+[gd_scene load_steps=63 format=4 uid="uid://6nylmryatr4i"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_4d7sh"]
@@ -10,9 +10,12 @@
 [ext_resource type="AudioStream" uid="uid://28e1e35qd2u5" path="res://assets/Into The Mist.wav" id="6_nauge"]
 [ext_resource type="PackedScene" uid="uid://hdqagp1r10iq" path="res://button.tscn" id="7_d21ai"]
 [ext_resource type="Script" uid="uid://bbm8r3dbpfcxk" path="res://bg_musicl1.gd" id="7_ycv2e"]
+[ext_resource type="AudioStream" uid="uid://cwyjb6gv277e8" path="res://assets/Jump2.wav" id="8_6e4cv"]
 [ext_resource type="Texture2D" uid="uid://n3nx3np48pv0" path="res://assets/More Tiles/tileset.png" id="8_nr8wp"]
 [ext_resource type="FontFile" uid="uid://cx5pgu2jrh0lj" path="res://PixelIntv-OPxd.ttf" id="8_rj586"]
 [ext_resource type="PackedScene" uid="uid://btfwshhv8pca0" path="res://resetPlayerAttribute.tscn" id="9_hqns4"]
+[ext_resource type="AudioStream" uid="uid://6xlksifm6dc8" path="res://assets/Pickup_Coin8.wav" id="9_uuy0h"]
+[ext_resource type="AudioStream" uid="uid://bphbqc8y21x7d" path="res://assets/Powerup2.wav" id="10_52iny"]
 [ext_resource type="Script" uid="uid://c0q6hq7v4ph4e" path="res://button2.gd" id="10_ir8iy"]
 [ext_resource type="Script" uid="uid://rslmo8gwt1tg" path="res://button3.gd" id="12_x0ka3"]
 [ext_resource type="Script" uid="uid://h6o86mcfg45v" path="res://button4.gd" id="14_nr8wp"]
@@ -486,11 +489,23 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Node2D" parent="Player" instance=ExtResource("4_q6r6c")]
-position = Vector2(2, 0)
+position = Vector2(365, 296)
 
 [node name="bgMusic" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("6_nauge")
 autoplay = true
+script = ExtResource("7_ycv2e")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("8_6e4cv")
+script = ExtResource("7_ycv2e")
+
+[node name="orbPick" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("9_uuy0h")
+script = ExtResource("7_ycv2e")
+
+[node name="powerUp" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("10_52iny")
 script = ExtResource("7_ycv2e")
 
 [node name="Killzone" parent="." instance=ExtResource("6_kdubu")]
