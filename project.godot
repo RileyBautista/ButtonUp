@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Log="*res://log.gd"
+Music="*res://music.gd"
 
 [editor_plugins]
 

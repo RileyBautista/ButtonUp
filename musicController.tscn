@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://be864f8cqont1"]
+
+[ext_resource type="AudioStream" uid="uid://dwkm5q6hm6m68" path="res://assets/Finale.wav" id="1_muufj"]
+[ext_resource type="Script" uid="uid://cho84v57jpft3" path="res://music.gd" id="2_w3c7i"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_muufj")
+attenuation = 1e-05
+script = ExtResource("2_w3c7i")

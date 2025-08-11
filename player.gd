@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var inverseGravity = false
 @onready var animated_sprite = $AnimatedSprite2D
 
+
+
 func _physics_process(delta: float) -> void:
 	if inverseGravity == true:
 		up_direction.y = 1.0

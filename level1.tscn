@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://6nylmryatr4i"]
+[gd_scene load_steps=60 format=4 uid="uid://6nylmryatr4i"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_4d7sh"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cqppio4bpn3ak" path="res://background.tscn" id="4_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://ontkn15mca2w" path="res://tileset.png" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://bky742od5l4o4" path="res://killzone.tscn" id="6_kdubu"]
+[ext_resource type="AudioStream" uid="uid://28e1e35qd2u5" path="res://assets/Into The Mist.wav" id="6_nauge"]
 [ext_resource type="PackedScene" uid="uid://hdqagp1r10iq" path="res://button.tscn" id="7_d21ai"]
+[ext_resource type="Script" uid="uid://bbm8r3dbpfcxk" path="res://bg_musicl1.gd" id="7_ycv2e"]
 [ext_resource type="Texture2D" uid="uid://n3nx3np48pv0" path="res://assets/More Tiles/tileset.png" id="8_nr8wp"]
 [ext_resource type="FontFile" uid="uid://cx5pgu2jrh0lj" path="res://PixelIntv-OPxd.ttf" id="8_rj586"]
 [ext_resource type="PackedScene" uid="uid://btfwshhv8pca0" path="res://resetPlayerAttribute.tscn" id="9_hqns4"]
@@ -17,7 +19,6 @@
 [ext_resource type="Script" uid="uid://nwy52hiharvs" path="res://door.gd" id="15_1idop"]
 [ext_resource type="Texture2D" uid="uid://bi0cv78qaglew" path="res://assets/Misc Sprites/strange_door_closed_anim_strip_10.png" id="15_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://b6vyplyuahrif" path="res://assets/Misc Sprites/door.png" id="16_flf07"]
-[ext_resource type="PackedScene" uid="uid://bpppg0sd2ueqv" path="res://log.tscn" id="18_beq0j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
 atlas = ExtResource("2_4d7sh")
@@ -487,6 +488,11 @@ position_smoothing_enabled = true
 [node name="Node2D" parent="Player" instance=ExtResource("4_q6r6c")]
 position = Vector2(2, 0)
 
+[node name="bgMusic" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("6_nauge")
+autoplay = true
+script = ExtResource("7_ycv2e")
+
 [node name="Killzone" parent="." instance=ExtResource("6_kdubu")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -612,8 +618,7 @@ animation = &"new_animation"
 position = Vector2(2094.5, -41.875)
 shape = SubResource("RectangleShape2D_beq0j")
 
-[node name="Log" parent="." instance=ExtResource("18_beq0j")]
-
+[connection signal="ready" from="Player" to="Player" method="_on_ready"]
 [connection signal="animation_changed" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_changed"]
 [connection signal="body_exited" from="Killzone" to="Player" method="_on_killzone_body_exited"]
 [connection signal="body_exited" from="Killzone" to="Killzone" method="_on_body_exited"]
