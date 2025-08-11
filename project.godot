@@ -13,6 +13,7 @@ config_version=5
 config/name="Platformer go brrr"
 run/main_scene="uid://6nylmryatr4i"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/image="uid://u4tk5an3knih"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,7 +22,7 @@ Log="*res://log.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [input]
 
