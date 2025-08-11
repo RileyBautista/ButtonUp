@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://bhiqu26upmva6"]
+[gd_scene load_steps=64 format=4 uid="uid://bhiqu26upmva6"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_r6vdu"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_21xmu"]
@@ -23,6 +23,8 @@
 [ext_resource type="FontFile" uid="uid://cx5pgu2jrh0lj" path="res://PixelIntv-OPxd.ttf" id="16_lwvnx"]
 [ext_resource type="Script" uid="uid://gwsfkd87hc0l" path="res://win_label.gd" id="17_4ou0f"]
 [ext_resource type="Texture2D" uid="uid://b6vyplyuahrif" path="res://assets/Misc Sprites/door.png" id="18_4k5bj"]
+[ext_resource type="Script" uid="uid://nwy52hiharvs" path="res://door.gd" id="23_3k4dh"]
+[ext_resource type="Texture2D" uid="uid://bi0cv78qaglew" path="res://assets/Misc Sprites/strange_door_closed_anim_strip_10.png" id="24_idpoe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
 atlas = ExtResource("2_21xmu")
@@ -290,6 +292,99 @@ size = Vector2(112, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8rrl"]
 size = Vector2(303.5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei405"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(0, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8dv2"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nhjh"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(32, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjha6"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(48, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt76g"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(64, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fr6y"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(80, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hxjc"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(96, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebxd8"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(112, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u7jv"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(128, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24dk6"]
+atlas = ExtResource("24_idpoe")
+region = Rect2(144, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mryly"]
+atlas = ExtResource("18_4k5bj")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggudo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei405")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8dv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nhjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjha6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt76g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fr6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hxjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebxd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u7jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24dk6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mryly")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2jff"]
+size = Vector2(15, 20.25)
 
 [node name="Node2D" type="Node2D"]
 
@@ -742,9 +837,19 @@ text = "Nice, you got X/8 Orbs
 You Died: X Times"
 script = ExtResource("17_4ou0f")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Door" type="Area2D" parent="."]
+z_index = 50
 position = Vector2(1903, 51)
-texture = ExtResource("18_4k5bj")
+script = ExtResource("23_3k4dh")
+
+[node name="doorSprite" type="AnimatedSprite2D" parent="Door"]
+z_index = 50
+sprite_frames = SubResource("SpriteFrames_ggudo")
+animation = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+z_index = 50
+shape = SubResource("RectangleShape2D_y2jff")
 
 [connection signal="ready" from="Player" to="Player" method="_on_ready"]
 [connection signal="animation_changed" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_changed"]
@@ -754,3 +859,4 @@ texture = ExtResource("18_4k5bj")
 [connection signal="body_exited" from="Button5" to="Button5" method="_on_body_exited"]
 [connection signal="body_exited" from="Button6" to="Button6" method="_on_body_exited"]
 [connection signal="body_exited" from="Button7" to="Button7" method="_on_body_exited"]
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
