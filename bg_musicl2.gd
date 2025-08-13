@@ -8,3 +8,7 @@ func _ready() -> void:
 	if Log.currentLevel == 1:
 		Log.currentLevel = 2
 	
+
+
+func _on_finished() -> void:
+	play()

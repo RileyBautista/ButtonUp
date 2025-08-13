@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://6nylmryatr4i"]
+[gd_scene load_steps=62 format=4 uid="uid://6nylmryatr4i"]
 
 [ext_resource type="Script" uid="uid://xbig6ucwspom" path="res://player.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cawkfitmfwcbl" path="res://assets/Hero Sprites/herochar_death_anim_strip_8.png" id="2_4d7sh"]
@@ -16,82 +16,81 @@
 [ext_resource type="PackedScene" uid="uid://btfwshhv8pca0" path="res://resetPlayerAttribute.tscn" id="9_hqns4"]
 [ext_resource type="AudioStream" uid="uid://6xlksifm6dc8" path="res://assets/Pickup_Coin8.wav" id="9_uuy0h"]
 [ext_resource type="AudioStream" uid="uid://bphbqc8y21x7d" path="res://assets/Powerup2.wav" id="10_52iny"]
-[ext_resource type="Script" uid="uid://c0q6hq7v4ph4e" path="res://button2.gd" id="10_ir8iy"]
 [ext_resource type="Script" uid="uid://rslmo8gwt1tg" path="res://button3.gd" id="12_x0ka3"]
 [ext_resource type="Script" uid="uid://h6o86mcfg45v" path="res://button4.gd" id="14_nr8wp"]
 [ext_resource type="Script" uid="uid://nwy52hiharvs" path="res://door.gd" id="15_1idop"]
 [ext_resource type="Texture2D" uid="uid://bi0cv78qaglew" path="res://assets/Misc Sprites/strange_door_closed_anim_strip_10.png" id="15_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://b6vyplyuahrif" path="res://assets/Misc Sprites/door.png" id="16_flf07"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2272n"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs5pn"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ta5nu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_utqry"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_flf07"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaofk"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k73cj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_itrrf"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rjqkl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr4ff"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(80, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fs4d3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bsag"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(96, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vxoj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3sn0"]
 atlas = ExtResource("2_4d7sh")
 region = Rect2(112, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s766"]
 atlas = ExtResource("2_epypp")
 region = Rect2(0, 80, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dev55"]
 atlas = ExtResource("2_epypp")
 region = Rect2(16, 80, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r45hk"]
 atlas = ExtResource("2_epypp")
 region = Rect2(32, 80, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h74q7"]
 atlas = ExtResource("2_epypp")
 region = Rect2(48, 80, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqa8r"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgaxw"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ir8iy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o421a"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqns4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2bfk"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0ka3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5flpd"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0h7mo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3kti"]
 atlas = ExtResource("3_0hol4")
 region = Rect2(80, 0, 16, 16)
 
@@ -99,28 +98,28 @@ region = Rect2(80, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nr8wp")
+"texture": SubResource("AtlasTexture_2272n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d2bti")
+"texture": SubResource("AtlasTexture_bs5pn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ta5nu")
+"texture": SubResource("AtlasTexture_utqry")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_flf07")
+"texture": SubResource("AtlasTexture_gaofk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k73cj")
+"texture": SubResource("AtlasTexture_itrrf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rjqkl")
+"texture": SubResource("AtlasTexture_mr4ff")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fs4d3")
+"texture": SubResource("AtlasTexture_0bsag")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7vxoj")
+"texture": SubResource("AtlasTexture_s3sn0")
 }, {
 "duration": 1.0,
 "texture": null
@@ -131,16 +130,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0hol4")
+"texture": SubResource("AtlasTexture_7s766")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q6r6c")
+"texture": SubResource("AtlasTexture_dev55")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kdubu")
+"texture": SubResource("AtlasTexture_r45hk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d21ai")
+"texture": SubResource("AtlasTexture_h74q7")
 }],
 "loop": true,
 "name": &"idle",
@@ -148,22 +147,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rj586")
+"texture": SubResource("AtlasTexture_tqa8r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4d7sh")
+"texture": SubResource("AtlasTexture_kgaxw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ir8iy")
+"texture": SubResource("AtlasTexture_o421a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqns4")
+"texture": SubResource("AtlasTexture_j2bfk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x0ka3")
+"texture": SubResource("AtlasTexture_5flpd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0h7mo")
+"texture": SubResource("AtlasTexture_s3kti")
 }],
 "loop": true,
 "name": &"running",
@@ -527,9 +526,19 @@ position = Vector2(34, 0)
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_rj586")
 
-[node name="Button" parent="." instance=ExtResource("7_d21ai")]
+[node name="Button2" parent="." node_paths=PackedStringArray("labelButton") instance=ExtResource("7_d21ai")]
+z_index = 10
+position = Vector2(451, -18)
+labelButton = NodePath("../infoText")
+jumpBoost = -800.0
+metadata/powerup_type = false
+metadata/Activated = false
+
+[node name="Button" parent="." node_paths=PackedStringArray("labelButton") instance=ExtResource("7_d21ai")]
 z_index = 10
 position = Vector2(208, 46)
+labelButton = NodePath("../beginningText2")
+speedBoost = 500.0
 metadata/powerup_type = false
 metadata/Activated = false
 
@@ -558,13 +567,6 @@ fit_content = true
 
 [node name="Spike" type="Node2D" parent="."]
 position = Vector2(1, 0)
-
-[node name="Button2" parent="." instance=ExtResource("7_d21ai")]
-z_index = 10
-position = Vector2(451, -18)
-script = ExtResource("10_ir8iy")
-metadata/powerup_type = false
-metadata/Activated = false
 
 [node name="Area2D" parent="." instance=ExtResource("9_hqns4")]
 position = Vector2(2, 0)
@@ -630,15 +632,31 @@ animation = &"new_animation"
 position = Vector2(2094.5, -41.875)
 shape = SubResource("RectangleShape2D_beq0j")
 
+[node name="Button5" parent="." instance=ExtResource("7_d21ai")]
+z_index = 10
+position = Vector2(994, -50)
+gravityChange = 1
+metadata/powerup_type = false
+metadata/Activated = false
+
+[node name="Button6" parent="." instance=ExtResource("7_d21ai")]
+z_index = 10
+position = Vector2(1872, -238)
+rotation = 3.14159
+metadata/powerup_type = false
+metadata/Activated = false
+
 [connection signal="ready" from="Player" to="Player" method="_on_ready"]
 [connection signal="animation_changed" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_changed"]
+[connection signal="finished" from="Player/bgMusic" to="Player/bgMusic" method="_on_finished"]
 [connection signal="body_exited" from="Killzone" to="Player" method="_on_killzone_body_exited"]
 [connection signal="body_exited" from="Killzone" to="Killzone" method="_on_body_exited"]
-[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
-[connection signal="body_exited" from="Button2" to="Player" method="_on_button_2_body_exited"]
 [connection signal="body_exited" from="Button2" to="Button2" method="_on_body_exited"]
+[connection signal="body_exited" from="Button" to="Button" method="_on_body_exited"]
 [connection signal="body_exited" from="Button3" to="Player" method="_on_button_2_body_exited"]
 [connection signal="body_exited" from="Button3" to="Button3" method="_on_body_exited"]
 [connection signal="body_exited" from="Button4" to="Player" method="_on_button_2_body_exited"]
 [connection signal="body_exited" from="Button4" to="Button4" method="_on_body_exited"]
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[connection signal="body_exited" from="Button5" to="Button5" method="_on_body_exited"]
+[connection signal="body_exited" from="Button6" to="Button6" method="_on_body_exited"]

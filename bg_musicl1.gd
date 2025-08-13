@@ -8,3 +8,7 @@ func _ready() -> void:
 		Log.currentLevel = 1
 	else: 
 		play(Log.audioTimestamp)
+
+
+func _on_finished() -> void:
+	play()
